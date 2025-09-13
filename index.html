@@ -1,33 +1,90 @@
-<!DOCTYPE html/html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <title>Everbound</title>
+        <!-- Load Fonts before styles.css -->
+         <!-- Lägg dessa FÖRE styles.css -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
 <body>
     <header>
-        <img class="logo" src="assets/logoliten.png" alt="Logo">
-        <nav>
+        <a href="index.html" class="logo-link">
+            <img src="assets/EverboundLogo.png" alt="small company logo that also works as a link to the startpage"></a>
+        <!-- <img class="logo" src="assets/EverboundLogo.png" alt="small Everbound logo"> -->
+        <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1 class="Title">The Bindery</h1>
-        <p>By Hand, In Time</p>
+        <section class="hero">
+            <div class="left">
+                <div class="message">
+                    <h1>Everbound</h1>
+                    <h2>By Hand, In Time</h2>
+                    <p>Handcrafted bookbinds. Careful rebinds. Custom slipcases
+                    <br>
+                    -made to last for generations.</p>
+                </div>
+                <div class="btnwrap">
+                    <div class="btn1">
+                        <a href="services.html">View Services</a>
+                    </div>
+                    <div class="btn2">
+                        <a href="contact.html">Request Quota</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="everbound">
+                <img src="assets/EverboundLogo.png" alt="everbound's logo in larger scale">
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 The Bindery</p>
+    <section class="services">
+        <h2>What we do</h2>
+        <div class="cards">
+            <article class="card">
+                <h3>Custom Hand Bindings</h3>
+                <p>Thread-sewn signature and expertly crafted cover in cloth, paper, or mixed media.</p>
+            </article>
+            <article class="card">
+                <h3>Rebinds</h3>
+                <p>Make your favorite softcover into a unique and gorgeus handcrafted hardcover.</p>
+            </article>
+            <article class="card">
+                <h3>Slipcasing</h3>
+                <p>Custom made slipcases when extra protection is a must.</p>
+            </article>
+        </div>
+    </section>
 
-        <div>
-            <a href="/">Facebook</a>
+    <footer>
+        <div class="footer">
+            <div class="cr">
+                <p>&copy; 2025 Everbound</p>
+                <p>Hand-bound books of Sweden</p>
+            </div>
+            <div class="partners">
+                <p>Partners:</p>
+                <a href="/">Smart Shirts</a>
+            </div>
+            <div class ="mail">
+                <a href="mailto:dennis.cederqvist@chasacademy.se">Contact</a>
+            </div>
         </div>
 
     </footer>
