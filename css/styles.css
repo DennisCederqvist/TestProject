@@ -1,18 +1,24 @@
 
 * {
-    margin: 0;
-    padding: 0;
-    --ink: #2b2b2b;
+     --ink: #2b2b2b;
     --shadow: rgba(0, 0, 0, 0.6);
     --wood: #6b4f3b;
+    --offwth: #fffdfa;
+    margin: 0;
+    padding: 0;
     color: var(--ink);
-    /* border: 2px dotted black; */
+    font-weight: normal;
     
 }
 
-h1, h2, h3 { 
+h1 { 
     font-family: "Cormorant Garamond", serif; 
     letter-spacing: .2px; 
+}
+
+h2, h3, p {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6; 
 }
 
 body {
@@ -34,6 +40,11 @@ header {
 header img {
     width: 80px;
     height: auto;
+    transition: transform 0.5s ease;
+}
+
+header img:hover {
+    transform: translateY(-2px);
 }
 
 .navbar ul {
@@ -48,7 +59,7 @@ header img {
     text-decoration: none;
     border-radius: 999px;
     color: var(--ink);
-    background-color: #fff;
+    background-color: var(--offwth);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -60,26 +71,33 @@ header img {
 main img {
     height: 400px;;
     width: auto;
+    transition: transform 1s ease;}
+
+main img:hover {
+    transform: scale(1.2);
 }
 
 main h1 {
     font-size: clamp(2.6rem, 5vw, 4rem); 
-    margin: 0 0 8px; 
+    font-weight: 600;
+    margin: 0 0 8px;
     color: var(--ink);
 }
 
 main h2 {
     color: var(--wood);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    letter-spacing: .2px; 
+    font-weight: normal;
     font-size: clamp(1.2rem, 3vw, 1.2rem); margin-bottom: 18px; 
 }
 
 main p {
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px;
 }
 
 .hero {
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,11 +107,7 @@ main p {
 
 .btnwrap {
     display: inline-flex;
-    gap: 20px;
-}
-
-.message {
-    /* Currently not in use */
+    gap: 10px;
 }
 
 .btn1 a {
@@ -101,8 +115,10 @@ main p {
     background-color: var(--wood);
     padding: 10px 15px;
     border-radius: 50px;
-    color: #fff;
+    color: var(--offwth);
     text-decoration: none;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 
@@ -113,11 +129,13 @@ main p {
 
 .btn2 a {
     display: flex;
-    background-color: #fff;
+    background-color: var(--offwth);
     padding: 10px 15px;
     border-radius: 50px;
     color: var(--ink);
     text-decoration: none;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 
@@ -133,9 +151,10 @@ main p {
 }
 
 .services h2 {
-    font-size: 30px;
+    font-family: "Cormorant Garamond", serif; 
     margin-bottom: 10px;
     font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 18px; 
+    font-weight: 600;
 }
 
 .cards {
@@ -148,7 +167,7 @@ main p {
 }
 
 .card {
-    background-color: #fff;
+    background-color: var(--offwth);
     border-radius: 12px;
     padding: 20px 30px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.12);
@@ -156,9 +175,10 @@ main p {
     max-width: 500px;
 }
 
-.cards h3 {
-    font-size: 1.3rem;
+.card h3 {
+    font-size: 20px;
     padding: 20px 0;
+    font-weight: 800;
 }
 
 .cards p {
@@ -175,7 +195,6 @@ footer {
     align-items: center;
     padding: 20px;
     margin-top: 20px;
-    max-width: 1100px;
     margin: 30px auto 0;
 }
 
@@ -184,6 +203,12 @@ footer {
 }
 
 .mail a{
+    display: inline-flex;
     text-decoration: none;
     color: var(--ink);
+    margin-left: 20px;
+}
+
+.mail a:hover {
+    text-decoration: underline;
 }
